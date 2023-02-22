@@ -11,21 +11,17 @@ const Navigation = () => {
 
   return (
     <header>
-      <h3>LOGO</h3>
       <nav ref={navRef}>
         <ul>
-          <NavLink to="/">
-            <li>Accueil</li>
-          </NavLink>
-          <NavLink to="/competence">
-            <li>En savoir plus...</li>
-          </NavLink>
-          <NavLink to="/portfolio">
-            <li>Portfolio</li>
-          </NavLink>
-          <NavLink to="/contact">
-            <li>Contact</li>
-          </NavLink>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/portfolio">Works</NavLink>
+          </li>
+          <li>
+            <a href="mailto:MarieCamillePetit@outlook.com">Contact me</a>
+          </li>
         </ul>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes />

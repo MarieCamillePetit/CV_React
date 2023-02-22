@@ -1,17 +1,26 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 80px;
   padding: 0 2rem;
-  background-color: #22272e;
-  color: #f1f1f1f1;
-  border-bottom: 1px solid #c500d6;
+  color: #22272e;
+  position: relative;
+
+  nav {
+    position: fixed;
+    background-color: #ffffff;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 2px 4px 0 rgba(237, 128, 128, 0.5);
+    z-index: 1000;
+    justify-content: center;
+  }
 
   nav ul {
     display: flex;
     margin: 0 1rem;
-    color: green;
+    color: #22272e;
     text-decoration: none;
     gap: 2rem;
     font-family: "Bakbak", sans-serif;
@@ -19,6 +28,13 @@ header {
     li {
       text-decoration: none;
       list-style-type: none;
+
+      a {
+        color: #22272e;
+      }
+      a:hover {
+        color: #ed8080;
+      }
     }
   }
 }
@@ -42,11 +58,14 @@ nav {
 }
 
 @media only screen and (max-width: 1024px) {
+  header {
+    justify-content: end;
+    box-shadow: 0 2px 4px 0 rgba(237, 128, 128, 0.5);
+  }
   header .nav-btn {
     visibility: visible;
     opacity: 1;
   }
-
   header nav {
     position: fixed;
     top: 0;
@@ -58,9 +77,10 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: #22272e;
+    background-color: #f1f1f1;
     transition: 1s;
     transform: translateY(-100vh);
+    box-shadow: none;
   }
 
   header .responsive_nav {

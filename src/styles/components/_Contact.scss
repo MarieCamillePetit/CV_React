@@ -1,0 +1,38 @@
+.container_contact {
+  background-color: #ed80803a;
+
+  .contact {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    padding: 3rem;
+
+    h2 {
+      color: #333;
+    }
+
+    .contact_left {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        color: #333;
+      }
+    }
+    .contact_right {
+      display: flex;
+      align-items: center;
+      a {
+        padding: 0.75rem 2rem;
+        border: 1px solid #d77474;
+        border-radius: 10px;
+        margin: 0 2rem;
+
+        &:hover {
+          background-color: #ed8080;
+          color: #f1f1f1;
+        }
+      }
+    }
+  }
+}
