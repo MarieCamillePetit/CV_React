@@ -1,30 +1,26 @@
 .portfolio {
   .portfolioContent {
     width: 100%;
-    display: grid;
+    display: flex;
     min-height: 500px;
     margin-bottom: 2rem;
   }
 
   .projects {
-    grid-area: 2;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0rem 2rem;
+    gap: 1rem;
 
     .project {
       border-radius: 10px;
-      margin: 0.5rem 0 0 0;
       text-align: center;
-      width: 32%;
-      max-height: 50%;
-      padding: 0.3rem;
-      padding: 0.5rem;
+      width: 30%;
       border: 1px solid #ed8080;
       cursor: pointer;
+      padding: 1rem;
 
       &:hover {
         box-shadow: 0 3px 7px #ed8080;
@@ -39,10 +35,7 @@
     }
 
     .btn_link {
-      display: flex;
       width: 100%;
-      gap: 2rem;
-      justify-content: center;
       margin-top: 2rem;
 
       a {
@@ -67,10 +60,10 @@
     }
 
     img {
-      object-fit: fit-content;
+      object-fit: fill;
       margin: 0 auto;
       width: 100%;
-      height: 55%;
+      height: 350px;
       box-shadow: 0 2px 6px #333;
       border-radius: 4px;
       cursor: pointer;
@@ -84,7 +77,7 @@
       }
     }
     .showInfos {
-      position: absolute;
+      position: fixed;
       top: 0;
       left: 0;
       bottom: 0;
@@ -133,6 +126,9 @@
       }
     }
   }
+  .return_btn_ {
+    margin-top: 2rem;
+  }
 
   .a_detail {
     padding: 0.75rem 2rem;
@@ -147,33 +143,57 @@
     }
   }
 }
-@media (max-width: 650px) and (min-width: 521px) {
-  .portfolioContent {
-    .project {
-      width: 49% !important;
 
-      i {
-        font-size: 1rem;
+@media (max-width: 1024px) {
+  .portfolio {
+    .portfolioContent {
+      .projects {
+        .project {
+          margin-top: 2rem;
+          width: 45%;
+        }
       }
-    }
-    .infosContent {
-      width: 100% !important;
     }
   }
 }
-@media (max-width: 520px) {
-  .radioDisplay {
-    display: none !important;
+
+@media (max-width: 768px) {
+  .portfolio {
+    .portfolioContent {
+      .projects {
+        padding: 0 2rem;
+        .project {
+          width: 100%;
+          max-width: 450px;
+        }
+      }
+    }
   }
-  .portfolioContent {
-    grid-template-rows: 1fr !important;
+}
 
-    .project {
-      grid-template-rows: 30px 40px 80px 40px !important;
-      width: 98% !important;
+@media (max-width: 650px) {
+  .portfolio {
+    .portfolioContent {
+      .projects {
+        .project {
+          .showInfos {
+            padding: 0 1rem;
+            .infosContent {
+              top: 25px;
+              max-width: 600px;
+              width: 100%;
+              .head {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
 
-      img {
-        height: 100% !important;
+                .sourceCode {
+                  margin-bottom: 1rem;
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

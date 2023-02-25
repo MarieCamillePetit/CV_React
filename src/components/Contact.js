@@ -10,7 +10,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="contact_right">
-          <a href="mailto:MarieCamillePetit@outlook.com" alt="mail">
+          <a href="mailto:contactportfolio@mariecamillepetit.fr" alt="mail">
             Contact me
           </a>
         </div>

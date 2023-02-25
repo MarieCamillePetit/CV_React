@@ -20,7 +20,9 @@ const Navigation = () => {
             <NavLink to="/portfolio">Works</NavLink>
           </li>
           <li>
-            <a href="mailto:MarieCamillePetit@outlook.com">Contact me</a>
+            <a href="mailto:contactportfolio@mariecamillepetit.fr">
+              Contact me
+            </a>
           </li>
         </ul>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>

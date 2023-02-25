@@ -1,6 +1,7 @@
 const About = () => {
   return (
     <div>
+      <p id="about"></p>
       <div className="about_me_page">
         <h2 class="title">About me 👩🏻‍💻 </h2>
         <div className="container_about">
@@ -30,7 +31,7 @@ const About = () => {
           </div>
           <div>
             <img
-              src="./media/billGates.jpg"
+              src="./media/MarieCamille.jpeg"
               alt=""
               className="pictureofme"
             ></img>

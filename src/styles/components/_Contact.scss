@@ -22,17 +22,26 @@
     .contact_right {
       display: flex;
       align-items: center;
+
       a {
         padding: 0.75rem 2rem;
         border: 1px solid #d77474;
+        background-color: #fff;
+        width: fit-content;
         border-radius: 10px;
         margin: 0 2rem;
 
         &:hover {
           background-color: #ed8080;
-          color: #f1f1f1;
+          color: #fff;
         }
       }
     }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .contact {
+    flex-direction: column;
+    align-items: center;
   }
 }

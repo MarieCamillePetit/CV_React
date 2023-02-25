@@ -2,7 +2,6 @@
 
 .hero-box {
   display: flex;
-  padding-top: 150px;
   background-color: #ffffff;
   max-width: 1200px;
   margin: 0 auto;
@@ -15,12 +14,16 @@
   width: 50%;
   padding: 20px;
 
+  .hero_box_link {
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+  }
+
   a {
     padding: 0.75rem 2rem;
     border: 1px solid #d77474;
     border-radius: 10px;
-    display: inline-block;
-    margin: 0 2rem;
 
     &:hover {
       background-color: #ed8080;
@@ -28,6 +31,11 @@
       transition: 0.2s;
     }
   }
+}
+
+.svg_banner {
+  width: 25px;
+  height: 25px;
 }
 
 .hero-box .left-side h2 {
@@ -90,6 +98,24 @@ h2.title_banner:before {
   border-bottom-right-radius: 20px;
 }
 
+.hero-scroll {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: #ed8080;
+  animation: incitation-scroll infinite ease-in alternate 500ms;
+}
+
+@keyframes incitation-scroll {
+  from {
+    transform: translate(-50%, -0.5vh);
+  }
+  to {
+    transform: translate(-50%, 0.5vh);
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .right-side {
     display: none;
@@ -108,5 +134,30 @@ h2.title_banner:before {
     height: 25px;
     bottom: 10px;
     left: 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-box {
+    justify-content: left;
+    padding: 2rem;
+  }
+
+  .left-side {
+    width: 100%;
+
+    .hero_box_link {
+      width: fit-content;
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: #ed8080;
+    animation: incitation-scroll infinite ease-in alternate 500ms;
   }
 }

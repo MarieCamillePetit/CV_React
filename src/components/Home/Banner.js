@@ -9,14 +9,42 @@ const Banner = () => {
             A student Web Developer ! I'm passionate with Front-end and creating
             applications on the web.
           </p>
-          {/* <NavLink to="/contact">Resumé</NavLink> */}
-          <a>GitHub</a>
-          <a>Linkedin</a>
+          <div className="hero_box_link">
+            <a>Resume</a>
+            <a>GitHub</a>
+            <a>Linkedin</a>
+          </div>
         </div>
         <div class="right-side">
-          <img src="./logo192.png" className="img_banner" alt="img"></img>
+          <img src="./minimoi.png" className="img_banner" alt="img"></img>
         </div>
-        <div class="hero-scroll"></div>
+      </div>
+      <div class="hero-scroll">
+        <a href="#about">
+          <svg
+            width="201px"
+            height="201px"
+            viewBox="0 0 1024 1024"
+            class="icon svg_banner"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="#ed8080"
+            transform="rotate(0)"
+          >
+            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g
+              id="SVGRepo_tracerCarrier"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></g>
+            <g id="SVGRepo_iconCarrier">
+              <path
+                d="M903.232 256l56.768 50.432L512 768 64 306.432 120.768 256 512 659.072z"
+                fill="#ed8080"
+              ></path>
+            </g>
+          </svg>
+        </a>
       </div>
     </>
   );
