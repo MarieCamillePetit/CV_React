@@ -11,14 +11,14 @@ export const portfolioData = [
     name: "Studio Ghiblou",
     languages: "React Native",
     source: "https://github.com/MarieCamillePetit/Studio_Ghiblou",
-    picture: "./media/Ghiblou.png",
+    picture: "./media/Ghiblou.PNG",
   },
   {
     id: 3,
-    name: "Runard - En cours",
+    name: "Runard - In progress",
     languages: "Flutter",
     source: "https://github.com/SimonL14/runard",
-    picture: "./media/runard.png",
+    picture: "./media/runard.PNG",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const portfolioData = [
     name: "MediatekFormation",
     languages: "PHP ~ Symfony",
     source: "https://github.com/MarieCamillePetit/mediatekformation",
-    picture: "./media/mediatekformation.JPG",
+    picture: "./media/mediatekformation.jpg",
   },
   {
     id: 7,

@@ -1,3 +1,4 @@
+import React from "react";
 const About = () => {
   return (
     <div>
@@ -22,17 +23,19 @@ const About = () => {
             </p>
 
             <div className="btn_link">
-              <a>Resume</a>
+              <a href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/CV.pdf?alt=media&token=9d6613d8-6940-4eb6-a8d8-d1f353f53e41">
+                Resume
+              </a>
               <a href="https://github.com/MarieCamillePetit?tab=repositories">
                 GitHub
               </a>
-              <a>Pix</a>
+              <a href="./media/pix.pdf">Pix</a>
             </div>
           </div>
           <div>
             <img
               src="./media/MarieCamille.jpeg"
-              alt=""
+              alt="It's me!"
               className="pictureofme"
             ></img>
           </div>
@@ -182,7 +185,7 @@ const About = () => {
                   </span>
                 </div>
                 <div class="desc">
-                  IUT of Calais - Développement internet et mobile
+                  IUT of Calais - Web and mobile development
                 </div>
               </div>
             </li>
@@ -195,7 +198,7 @@ const About = () => {
                     <span class="time">2020 - 2022</span>
                   </span>
                 </div>
-                <div class="desc"> CNED -BTS SIO Option SLAM</div>
+                <div class="desc"> CNED - BTS SIO Option SLAM</div>
               </div>
             </li>
             <li>
@@ -207,8 +210,8 @@ const About = () => {
                   </span>
                 </div>
                 <div class="desc">
-                  OTAN (Allied Land Command), Izmir, TR - Mise en place d'une
-                  plateforme d'enseignement en ligne
+                  OTAN (Allied Land Command), Izmir, TR - Setting up a online
+                  teaching platform
                 </div>
               </div>
             </li>
@@ -222,8 +225,8 @@ const About = () => {
                   </span>
                 </div>
                 <div class="desc">
-                  Cned - Ce Bac se caractérise par une diversité d’enseignements
-                  liés aux sciences naturelles, sociales et sanitaires.
+                  CNED - This baccalaureate is characterized by a diversity of
+                  lessons related to the natural, social and health sciences.
                 </div>
               </div>
             </li>

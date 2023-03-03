@@ -1,3 +1,5 @@
+import React from "react";
+
 const Banner = () => {
   return (
     <>
@@ -10,9 +12,13 @@ const Banner = () => {
             applications on the web.
           </p>
           <div className="hero_box_link">
-            <a>Resume</a>
-            <a>GitHub</a>
-            <a>Linkedin</a>
+            <a href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/CV.pdf?alt=media&token=9d6613d8-6940-4eb6-a8d8-d1f353f53e41">
+              Resume
+            </a>
+            <a href="https://github.com/MarieCamillePetit">GitHub</a>
+            <a href="https://www.linkedin.com/in/mariecamillepetit/">
+              Linkedin
+            </a>
           </div>
         </div>
         <div class="right-side">

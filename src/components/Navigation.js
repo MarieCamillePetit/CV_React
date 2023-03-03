@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -23,6 +23,9 @@ const Navigation = () => {
             <a href="mailto:contactportfolio@mariecamillepetit.fr">
               Contact me
             </a>
+          </li>
+          <li>
+            <NavLink to="/login">Login</NavLink>
           </li>
         </ul>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
