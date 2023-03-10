@@ -3,10 +3,10 @@ import React from "react";
 const Banner = () => {
   return (
     <>
-      <div class="hero-box">
-        <div class="left-side">
+      <div className="hero-box">
+        <div className="left-side">
           <h4>Hi there ! 🌸</h4>
-          <h2 class="title_banner">I'm Marie-Camille Petit</h2>
+          <h2 className="title_banner">I'm Marie-Camille Petit</h2>
           <p>
             A student Web Developer ! I'm passionate with Front-end and creating
             applications on the web.
@@ -21,27 +21,27 @@ const Banner = () => {
             </a>
           </div>
         </div>
-        <div class="right-side">
+        <div className="right-side">
           <img src="./minimoi.png" className="img_banner" alt="img"></img>
         </div>
       </div>
-      <div class="hero-scroll">
+      <div className="hero-scroll">
         <a href="#about">
           <svg
             width="201px"
             height="201px"
             viewBox="0 0 1024 1024"
-            class="icon svg_banner"
+            className="icon svg_banner"
             version="1.1"
             xmlns="http://www.w3.org/2000/svg"
             fill="#ed8080"
             transform="rotate(0)"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             ></g>
             <g id="SVGRepo_iconCarrier">
               <path

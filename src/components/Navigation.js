@@ -25,7 +25,7 @@ const Navigation = () => {
             </a>
           </li>
           <li>
-            <NavLink to="/login">Login</NavLink>
+            <NavLink to="/login">Mon compte</NavLink>
           </li>
         </ul>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>

@@ -4,7 +4,7 @@ const About = () => {
     <div>
       <p id="about"></p>
       <div className="about_me_page">
-        <h2 class="title">About me 👩🏻‍💻 </h2>
+        <h2 className="title">About me 👩🏻‍💻 </h2>
         <div className="container_about">
           <div className="about_me">
             <p>
@@ -42,7 +42,7 @@ const About = () => {
         </div>
 
         <div>
-          <h2 class="title">My Toolkit 💻</h2>
+          <h2 className="title">My Toolkit 💻</h2>
           <ul className="skill">
             <li>
               <svg
@@ -174,42 +174,42 @@ const About = () => {
         </div>
 
         <div>
-          <h2 class="title">Education 📚</h2>
-          <ul class="timeline">
+          <h2 className="title">Education 📚</h2>
+          <ul className="timeline">
             <li>
-              <div class="direction-r">
-                <div class="flag-wrapper">
-                  <span class="flag">LP DIM</span>
-                  <span class="time-wrapper">
-                    <span class="time">2022 - present</span>
+              <div className="direction-r">
+                <div className="flag-wrapper">
+                  <span className="flag">LP DIM</span>
+                  <span className="time-wrapper">
+                    <span className="time">2022 - present</span>
                   </span>
                 </div>
-                <div class="desc">
+                <div className="desc">
                   IUT of Calais - Web and mobile development
                 </div>
               </div>
             </li>
 
             <li>
-              <div class="direction-l">
-                <div class="flag-wrapper">
-                  <span class="flag">BTS SIO</span>
-                  <span class="time-wrapper">
-                    <span class="time">2020 - 2022</span>
+              <div className="direction-l">
+                <div className="flag-wrapper">
+                  <span className="flag">BTS SIO</span>
+                  <span className="time-wrapper">
+                    <span className="time">2020 - 2022</span>
                   </span>
                 </div>
-                <div class="desc"> CNED - BTS SIO Option SLAM</div>
+                <div className="desc"> CNED - BTS SIO Option SLAM</div>
               </div>
             </li>
             <li>
-              <div class="direction-l">
-                <div class="flag-wrapper">
-                  <span class="flag">Stage Otan</span>
-                  <span class="time-wrapper">
-                    <span class="time">April 2021</span>
+              <div className="direction-l">
+                <div className="flag-wrapper">
+                  <span className="flag">Stage Otan</span>
+                  <span className="time-wrapper">
+                    <span className="time">April 2021</span>
                   </span>
                 </div>
-                <div class="desc">
+                <div className="desc">
                   OTAN (Allied Land Command), Izmir, TR - Setting up a online
                   teaching platform
                 </div>
@@ -217,14 +217,14 @@ const About = () => {
             </li>
 
             <li>
-              <div class="direction-r">
-                <div class="flag-wrapper">
-                  <span class="flag">BAC ST2S</span>
-                  <span class="time-wrapper">
-                    <span class="time">2016 - 2019</span>
+              <div className="direction-r">
+                <div className="flag-wrapper">
+                  <span className="flag">BAC ST2S</span>
+                  <span className="time-wrapper">
+                    <span className="time">2016 - 2019</span>
                   </span>
                 </div>
-                <div class="desc">
+                <div className="desc">
                   CNED - This baccalaureate is characterized by a diversity of
                   lessons related to the natural, social and health sciences.
                 </div>
