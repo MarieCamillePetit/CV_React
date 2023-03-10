@@ -10,15 +10,6 @@ const Connected = ({ user }) => {
       <div id="sign-in-status"></div>
       <div id="sign-in"></div>
       <pre id="account-details"></pre>
-      {/* <div className="home">
-        <h1>
-          Hello, <span></span>
-          {user.displayName}
-        </h1>
-        <button className="button signout" onClick={() => auth.signOut()}>
-          Sign out
-        </button>
-      </div> */}
     </>
   );
 };
