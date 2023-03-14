@@ -4,7 +4,8 @@ import Footer from "../components/Footer";
 import Contact from "../components/Contact";
 import Banner from "../components/Home/Banner";
 import About from "../components/Home/About";
-import ProjectsDb from "../../src/data/firestore";
+import AddProject from "../components/Portfolio/AddProject";
+
 const Home = () => {
   return (
     <>
@@ -13,7 +14,6 @@ const Home = () => {
       <Contact />
       <About />
       <Footer />
-      <ProjectsDb />
     </>
   );
 };

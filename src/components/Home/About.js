@@ -1,7 +1,10 @@
 import React from "react";
+import ProjectsDb from "../../data/firestore";
+
 const About = () => {
   return (
     <div>
+      <ProjectsDb />
       <p id="about"></p>
       <div className="about_me_page">
         <h2 className="title">About me 👩🏻‍💻 </h2>

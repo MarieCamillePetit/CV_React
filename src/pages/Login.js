@@ -1,10 +1,7 @@
 import React from "react";
-import firebase from "firebase/compat/app";
-import * as firebaseui from "firebaseui";
 import "firebaseui/dist/firebaseui.css";
 import Navigation from "../components/Navigation";
-import AuthGoogle, { signInWithGoogle } from "./AuthGoogle";
-import Footer from "../components/Footer";
+import AuthGoogle from "./AuthGoogle";
 
 const Login = () => {
   return (

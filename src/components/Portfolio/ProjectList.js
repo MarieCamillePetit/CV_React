@@ -1,23 +1,50 @@
 import React, { Component } from "react";
+import { useEffect, useState } from "react";
 import { portfolioData } from "../../data/portfolioData";
 import Project from "./Project";
+import ProjetsDataService from "../../services/projets.services";
 
-export default class ProjectList extends Component {
-  state = {
-    projects: portfolioData,
+const ProjectList = () => {
+  const [projects, setProjects] = useState([]);
+  useEffect(() => {
+    getProject();
+  }, []);
+
+  const getProject = async () => {
+    const data = await ProjetsDataService.getAllProject();
+    console.log(data.docs);
+    setProjects(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
-  render() {
-    let { projects } = this.state;
-
-    return (
+  return (
+    <>
       <div className="portfolioContent">
         <div className="projects">
-          {projects.map((item) => {
-            return <Project key={item.id} item={item} />;
-          })}
+          {projects.map((doc) => (
+            <div key={doc.id}>
+              <div key={doc.id} className="project">
+                <img src="./media/twittosphere.PNG" alt=""></img>
+                <span className="infos">
+                  <h2>{doc.nom}</h2>
+                  <p>{doc.Technologies}</p>
+                  <p>{doc.infos}</p>
+                </span>
+                <div className="btn_link">
+                  <a href={doc.github}>Github</a>
+                  {/* <a
+                    href="/Project"
+                    variant="secondary"
+                    className=""
+                    onClick={(e) => getProject(doc.id)}
+                  ></a> */}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    );
-  }
-}
+    </>
+  );
+};
+
+export default ProjectList;

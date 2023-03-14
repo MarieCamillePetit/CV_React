@@ -1,11 +1,8 @@
-import React, { useEffect, useState, initApp } from "react";
+import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import Login from "./pages/Login";
-import firebase from "firebase/compat/app";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import Connected from "./pages/Connected";
 
 const App = () => {
   return (

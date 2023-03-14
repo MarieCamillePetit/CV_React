@@ -1,5 +1,4 @@
 import React from "react";
-import { auth } from "./AuthGoogle";
 import "../App.js";
 import Navigation from "../components/Navigation";
 
