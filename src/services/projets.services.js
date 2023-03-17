@@ -1,4 +1,11 @@
-import { collection, getDocs, getDoc, addDoc, doc } from "firebase/firestore";
+import {
+  collection,
+  getDocs,
+  getDoc,
+  addDoc,
+  doc,
+  deleteDoc,
+} from "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
@@ -32,6 +39,11 @@ class ProjetsDataService {
   getProject = async (id) => {
     const docRef = doc(db, "projets", id);
     return await getDoc(docRef);
+  };
+
+  deleteProject = async (id) => {
+    const docRef = doc(db, "projets", id);
+    return await deleteDoc(docRef);
   };
 }
 

@@ -1,7 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import { useEffect, useState } from "react";
-import { portfolioData } from "../../data/portfolioData";
-import Project from "./Project";
 import ProjetsDataService from "../../services/projets.services";
 
 const ProjectList = () => {
@@ -17,33 +15,29 @@ const ProjectList = () => {
   };
 
   return (
-    <>
-      <div className="portfolioContent">
-        <div className="projects">
-          {projects.map((doc) => (
-            <div key={doc.id}>
-              <div key={doc.id} className="project">
-                <img src="./media/twittosphere.PNG" alt=""></img>
-                <span className="infos">
-                  <h2>{doc.nom}</h2>
-                  <p>{doc.Technologies}</p>
-                  <p>{doc.infos}</p>
-                </span>
-                <div className="btn_link">
-                  <a href={doc.github}>Github</a>
-                  {/* <a
+    <div className="portfolioContent">
+      <div className="projects">
+        {projects.map((doc) => (
+          <div key={doc.id} className="project">
+            <img src="./media/twittosphere.PNG" alt=""></img>
+            <span className="infos">
+              <h2>{doc.nom}</h2>
+              <p>{doc.Technologies}</p>
+              <p>{doc.infos}</p>
+            </span>
+            <div className="btn_link">
+              <a href={doc.github}>Github</a>
+              {/* <a
                     href="/Project"
                     variant="secondary"
                     className=""
                     onClick={(e) => getProject(doc.id)}
                   ></a> */}
-                </div>
-              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 
