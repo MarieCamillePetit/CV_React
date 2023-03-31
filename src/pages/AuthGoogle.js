@@ -4,7 +4,6 @@ import StyledFirebaseAuth from "react-firebaseui/StyledFirebaseAuth";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import UsersDataService from "../services/user.services";
-import ProjectsDataService from "../services/projets.services";
 import AddProject from "../components/Portfolio/AddProject";
 import DeleteProject from "../components/Portfolio/DeleteProject";
 
@@ -39,9 +38,6 @@ const uiConfig = {
 function SignInScreen() {
   const [isSignedIn, setIsSignedIn] = useState(false); // Local signed-in state.
 
-  // const idToken = firebase.auth().currentUser?.getIdToken();
-  // console.log(idToken);
-
   // Listen to the Firebase Auth state and set the local state.
   useEffect(() => {
     const unregisterAuthObserver = firebase
@@ -65,7 +61,7 @@ function SignInScreen() {
   if (!isSignedIn) {
     return (
       <div className="AuthGoogleContainer">
-        <p>Connecter vous :</p>
+        <p>Login :</p>
         <StyledFirebaseAuth
           uiConfig={uiConfig}
           firebaseAuth={firebase.auth()}
@@ -79,37 +75,45 @@ function SignInScreen() {
 
   if (
     isSignedIn &&
-    email == firebase.auth().currentUser.email &&
-    role == "ADMIN" &&
-    uid == firebase.auth().currentUser.uid
+    email === firebase.auth().currentUser.email &&
+    role === "ADMIN" &&
+    uid === firebase.auth().currentUser.uid
   ) {
     return (
       <div className="AuthGoogleContainer">
         <div className="Profile">
           {firebase.auth().currentUser.photoURL ? (
-            <img
-              alt="profile picture"
-              src={firebase.auth().currentUser.photoURL}
-            />
+            <img src={firebase.auth().currentUser.photoURL} />
           ) : null}
-          <h2>Bienvenue {firebase.auth().currentUser.displayName}!</h2>
+          <h2>
+            Hi {firebase.auth().currentUser.displayName}!{" "}
+            <span role="img">🌸</span>
+          </h2>
         </div>
 
         <p>
-          Vous êtes connecté avec l'adresse mail :{" "}
+          You are connected with the email address:{" "}
           {firebase.auth().currentUser.email}
         </p>
 
         <div className="btn_link">
-          <a href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/CV.pdf?alt=media&token=9d6613d8-6940-4eb6-a8d8-d1f353f53e41">
+          <a
+            href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/CV.pdf?alt=media&token=9d6613d8-6940-4eb6-a8d8-d1f353f53e41"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Resume
           </a>
-          <a href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/mcreact2023.rar?alt=media&token=0188c0db-a92e-44f5-ab22-1b49b012b8b8">
-            Code source du site
+          <a
+            href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/mcreact2023.rar?alt=media&token=0188c0db-a92e-44f5-ab22-1b49b012b8b8"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Code source
           </a>
         </div>
         <div className="btn_link_logout">
-          <a onClick={() => firebase.auth().signOut()}>Se déconnecter</a>
+          <a onClick={() => firebase.auth().signOut()}>Sign out</a>
         </div>
         <AddProject />
         <DeleteProject />
@@ -120,28 +124,36 @@ function SignInScreen() {
     <div className="AuthGoogleContainer">
       <div className="Profile">
         {firebase.auth().currentUser.photoURL ? (
-          <img
-            alt="profile picture"
-            src={firebase.auth().currentUser.photoURL}
-          />
+          <img src={firebase.auth().currentUser.photoURL} />
         ) : null}
-        <h2>Bienvenue {firebase.auth().currentUser.displayName}!</h2>
+        <h2>
+          Hi {firebase.auth().currentUser.displayName}!{" "}
+          <span role="img">🌸</span>
+        </h2>{" "}
       </div>
 
       <p>
-        Vous êtes connecté avec l'adresse mail :{" "}
+        You are connected with the email address:{" "}
         {firebase.auth().currentUser.email}
       </p>
       <div className="btn_link">
-        <a href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/CV.pdf?alt=media&token=9d6613d8-6940-4eb6-a8d8-d1f353f53e41">
+        <a
+          href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/CV.pdf?alt=media&token=9d6613d8-6940-4eb6-a8d8-d1f353f53e41"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Resume
         </a>
-        <a href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/mcreact2023.rar?alt=media&token=0188c0db-a92e-44f5-ab22-1b49b012b8b8">
-          Code source du site
+        <a
+          href="https://firebasestorage.googleapis.com/v0/b/mcp-projet-2023.appspot.com/o/mcreact2023.rar?alt=media&token=0188c0db-a92e-44f5-ab22-1b49b012b8b8"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Code source
         </a>
       </div>
       <div className="btn_link_logout">
-        <a onClick={() => firebase.auth().signOut()}>Se déconnecter</a>
+        <a onClick={() => firebase.auth().signOut()}>Sign out</a>
       </div>
     </div>
   );

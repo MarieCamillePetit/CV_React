@@ -10,7 +10,6 @@ const ProjectList = () => {
 
   const getProject = async () => {
     const data = await ProjetsDataService.getAllProject();
-    console.log(data.docs);
     setProjects(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 
@@ -19,7 +18,7 @@ const ProjectList = () => {
       <div className="projects">
         {projects.map((doc) => (
           <div key={doc.id} className="project">
-            <img src="./media/twittosphere.PNG" alt=""></img>
+            <img src={`./${doc.picture}`} alt=""></img>
             <span className="infos">
               <h2>{doc.nom}</h2>
               <p>{doc.Technologies}</p>
@@ -27,12 +26,14 @@ const ProjectList = () => {
             </span>
             <div className="btn_link">
               <a href={doc.github}>Github</a>
-              {/* <a
-                    href="/Project"
-                    variant="secondary"
-                    className=""
-                    onClick={(e) => getProject(doc.id)}
-                  ></a> */}
+              <a
+                href="/project/:doc.id"
+                variant="secondary"
+                className=""
+                onClick={(e) => getProject(doc.id)}
+              >
+                See more
+              </a>
             </div>
           </div>
         ))}

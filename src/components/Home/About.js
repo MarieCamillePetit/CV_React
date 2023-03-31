@@ -7,7 +7,9 @@ const About = () => {
       <ProjectsDb />
       <p id="about"></p>
       <div className="about_me_page">
-        <h2 className="title">About me 👩🏻‍💻 </h2>
+        <h2 className="title">
+          About me <span role="img">👩🏻‍💻</span>{" "}
+        </h2>
         <div className="container_about">
           <div className="about_me">
             <p>
@@ -22,7 +24,7 @@ const About = () => {
               Other than coding, I spend most of my free time playing many video
               games. My greatest passion is travelling, I like discovering new
               horizons and new cultures! I also like diving.. I feel like a fish
-              in water.. 🐠
+              in water.. <span role="img">🐠</span>
             </p>
 
             <div className="btn_link">
@@ -45,7 +47,9 @@ const About = () => {
         </div>
 
         <div>
-          <h2 className="title">My Toolkit 💻</h2>
+          <h2 className="title">
+            My Toolkit <span role="img">💻</span>
+          </h2>
           <ul className="skill">
             <li>
               <svg

@@ -9,7 +9,6 @@ const DeleteProject = () => {
 
   const getProject = async () => {
     const data = await ProjetsDataService.getAllProject();
-    console.log(data.docs);
     setProjects(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
   };
 

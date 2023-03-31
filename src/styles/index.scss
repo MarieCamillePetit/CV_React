@@ -6,3 +6,18 @@
 @import "./components/_Contact.scss";
 @import "./components/_Banner.scss";
 @import "./components/_Login.scss";
+
+.notification.active {
+  display: block;
+  position: absolute;
+  background-color: #f3cece;
+  padding: 0.5rem 2rem;
+  top: 5rem;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+}
+
+.notification {
+  display: none;
+}

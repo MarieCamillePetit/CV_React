@@ -7,7 +7,7 @@ const AddProject = () => {
   const [nom, setNom] = useState("");
   const [picture, setPicture] = useState("");
   const [Technologies, setTechnologies] = useState([]);
-  const [message, setMessage] = useState({ error: false, message: "" });
+  const [setMessage] = useState({ error: false, message: "" });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
